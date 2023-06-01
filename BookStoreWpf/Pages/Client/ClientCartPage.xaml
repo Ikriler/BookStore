@@ -28,7 +28,7 @@
                             <TextBlock Style="{StaticResource ResourceKey=textBlockDefault}" Text="{Binding product.quantity, StringFormat=Осталось на складе: {0}}"/>
                         </StackPanel>
                         <StackPanel VerticalAlignment="Center" Grid.Column="3" Orientation="Horizontal" HorizontalAlignment="Center">
-                            <Button  Content="-" Style="{StaticResource ResourceKey=buttonDefault}" Width="30" Height="30" Margin="0 0 20 0">
+                            <Button Name="QuantityOneDelete" Content="-" Style="{StaticResource ResourceKey=buttonDefault}" Width="30" Height="30" Margin="0 0 20 0" Click="QuantityOneDelete_Click">
      
                             </Button>
                             <TextBlock Style="{StaticResource ResourceKey=textBlockDefault}" Text="{Binding quantity}" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="0 0 20 0"/>

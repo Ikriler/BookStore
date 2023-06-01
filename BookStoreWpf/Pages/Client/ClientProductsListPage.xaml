@@ -7,7 +7,9 @@
       mc:Ignorable="d" 
       d:DesignHeight="450" d:DesignWidth="800"
       Title="ClientProductsListPage" Loaded="Page_Loaded">
-
+    <Page.Resources>
+        <local:ProductAccessConverter x:Key="ProductAccessConverter"/>
+    </Page.Resources>
     <Grid>
         <ListView Name="ProductsLV" SelectionMode="Single">
             <ListView.ItemTemplate>
@@ -28,8 +30,23 @@
                             <TextBlock Style="{StaticResource ResourceKey=textBlockDefault}" Text="{Binding quantity, StringFormat=Осталось на складе: {0}}"/>
                         </StackPanel>
                         <StackPanel VerticalAlignment="Center" Grid.Column="2" Grid.ColumnSpan="2">
-                            <Button Name="AddToCart" Content="Добавить в корзину" Style="{StaticResource ResourceKey=buttonDefault}" Width="200" Click="AddToCart_Click">
- 
+                            <Button Name="AddToCart" Width="200" Click="AddToCart_Click">
+                                <Button.Style>
+                                    <Style TargetType="Button">
+                                        <Setter Property="Background" Value="LightCoral"/>
+                                        <Setter Property="Foreground" Value="AliceBlue"/>
+                                        <Setter Property="FontSize" Value="20"/>
+                                        <Setter Property="FontFamily" Value="Roboto"/>
+                                        <Setter Property="Content" Value="Добавить в корзину"/>
+                                        <Style.Triggers>
+                                            <DataTrigger Binding="{Binding id, Converter={StaticResource ProductAccessConverter}}" Value="true">
+                                                <Setter Property="Background" Value="Gray"/>
+                                                <Setter Property="Content" Value="В корзине"/>
+                                                <Setter Property="IsEnabled" Value="False"/>
+                                            </DataTrigger>
+                                        </Style.Triggers>
+                                    </Style>
+                                </Button.Style>
                             </Button>
                         </StackPanel>
                     </Grid>

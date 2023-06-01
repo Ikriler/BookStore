@@ -112,3 +112,4 @@ D:\Projects\BookStoreWpf\BookStoreWpf\obj\Debug\Pages\Client\ClientProductsListP
 D:\Projects\BookStoreWpf\BookStoreWpf\obj\Debug\Pages\Client\ClientProductsListPage.baml
 D:\Projects\BookStoreWpf\BookStoreWpf\obj\Debug\Pages\Client\ClientCartPage.g.cs
 D:\Projects\BookStoreWpf\BookStoreWpf\obj\Debug\Pages\Client\ClientCartPage.baml
+D:\Projects\BookStoreWpf\BookStoreWpf\obj\Debug\GeneratedInternalTypeHelper.g.cs

@@ -45,10 +45,10 @@ namespace BookStoreWpf.Pages.Client
         {
             List<Product> products = await BookStoreDBContext.db.Products.ToListAsync();
 
-            if (order != null && order.orderProducts != null)
-            {
-                products = products.Except(order.orderProducts.Select(o => o.product)).ToList();
-            }
+            //if (order != null && order.orderProducts != null)
+            //{
+            //    products = products.Except(order.orderProducts.Select(o => o.product)).ToList();
+            //}
 
             ProductsLV.ItemsSource = products;
         }
@@ -83,10 +83,27 @@ namespace BookStoreWpf.Pages.Client
                 }
                 BookStoreDBContext.db.SaveChanges();
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 MessageBox.Show(ex.Message.ToString());
             }
+        }
+    }
+
+    public class ProductAccessConverter : IValueConverter
+    {
+        public object Convert(object value, Type targetType, object parameter, CultureInfo culture)
+        {
+            Product product = BookStoreDBContext.db.Products.Where(p => p.id.Equals((int)value)).FirstOrDefault();
+            if (ClientProductsListPage.order != null && product != null)
+            {
+                return ClientProductsListPage.order.orderProducts.Select(o => o.product).Contains(product);
+            }
+            return false;
+        }
+        public object ConvertBack(object value, Type targetType, object parameter, CultureInfo culture)
+        {
+            throw new NotImplementedException();
         }
     }
 }

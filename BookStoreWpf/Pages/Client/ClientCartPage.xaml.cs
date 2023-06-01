@@ -33,14 +33,35 @@ namespace BookStoreWpf.Pages.Client
 
             _user = user;
 
-            order = BookStoreDBContext.db.Orders.Include(o => o.user).Include(o => o.status).Where(o => o.user.Equals(_user) && o.status.id.Equals((int)StatusesEnum.CART)).FirstOrDefault();
+            UpdateItems();
+        }
+
+        private void UpdateItems()
+        {
+            order = BookStoreDBContext.db.Orders.Include(o => o.user).Include(o => o.status).Include(o => o.orderProducts).Where(o => o.user.Equals(_user) && o.status.id.Equals((int)StatusesEnum.CART)).FirstOrDefault();
 
             if (order != null)
             {
+                ProductsLV.ItemsSource = null;
                 ProductsLV.ItemsSource = order.orderProducts;
             }
         }
 
+        private void QuantityOneDelete_Click(object sender, RoutedEventArgs e)
+        {
+            OrderProduct orderProduct = (sender as Button).DataContext as OrderProduct;
 
+            orderProduct.quantity--;
+
+            if(orderProduct.quantity <= 0) 
+            {
+                order.orderProducts.Remove(orderProduct);
+                BookStoreDBContext.db.OrderProducts.Remove(orderProduct);
+            }
+
+            BookStoreDBContext.db.SaveChanges();
+
+            UpdateItems();
+        }
     }
 }
