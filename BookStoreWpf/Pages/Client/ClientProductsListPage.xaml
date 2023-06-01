@@ -1,0 +1,47 @@
+﻿<Page x:Class="BookStoreWpf.Pages.Client.ClientProductsListPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:BookStoreWpf.Pages.Client"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="ClientProductsListPage" Loaded="Page_Loaded">
+
+    <Grid>
+        <ListView Name="ProductsLV" SelectionMode="Single">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition/>
+                            <ColumnDefinition/>
+                            <ColumnDefinition/>
+                            <ColumnDefinition/>
+                        </Grid.ColumnDefinitions>
+                        <TextBlock Name="FullImagePath" Text="{Binding imagePath,StringFormat=/Resources/Images/{0}}" Visibility="Collapsed"/>
+                        <Image Source="{Binding Text, ElementName=FullImagePath}" Height="100" Width="100" Grid.Column="0"/>
+                        <StackPanel Orientation="Vertical" VerticalAlignment="Center" Grid.Column="1">
+                            <TextBlock Style="{StaticResource ResourceKey=textBlockDefault}" Text="{Binding name, StringFormat=Название: {0}}"/>
+                            <TextBlock Style="{StaticResource ResourceKey=textBlockDefault}" Text="{Binding description, StringFormat=Описание: {0}}"/>
+                            <TextBlock Style="{StaticResource ResourceKey=textBlockDefault}" Text="{Binding price, StringFormat=Цена: {0} рублей}"/>
+                            <TextBlock Style="{StaticResource ResourceKey=textBlockDefault}" Text="{Binding quantity, StringFormat=Осталось на складе: {0}}"/>
+                        </StackPanel>
+                        <StackPanel VerticalAlignment="Center" Grid.Column="2" Grid.ColumnSpan="2">
+                            <Button Name="AddToCart" Content="Добавить в корзину" Style="{StaticResource ResourceKey=buttonDefault}" Width="200" Click="AddToCart_Click">
+ 
+                            </Button>
+                        </StackPanel>
+                    </Grid>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+            <ListView.ItemContainerStyle>
+                <Style TargetType="ListViewItem">
+                    <Setter Property="Background" Value="AntiqueWhite"/>
+                    <Setter Property="Margin" Value="40 20"/>
+                    <Setter Property="HorizontalContentAlignment" Value="Stretch"/>
+                </Style>
+            </ListView.ItemContainerStyle>
+        </ListView>
+    </Grid>
+</Page>

@@ -1,0 +1,38 @@
+﻿<Window x:Class="BookStoreWpf.LoginWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:BookStoreWpf"
+        mc:Ignorable="d"
+        Title="LoginWindow" Height="450" Width="800" MinHeight="450" MinWidth="800" WindowStartupLocation="CenterScreen">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="0.3*"/>
+            <ColumnDefinition Width="0.5*"/>
+            <ColumnDefinition/>
+            <ColumnDefinition Width="0.5*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Label Grid.Column="1" Grid.Row="1" Style="{StaticResource ResourceKey=labelDefault}">Email</Label>
+        <TextBox Name="EmailTB" Grid.Row="1" Grid.Column="2" Margin="15" Style="{StaticResource ResourceKey=textBoxDefault}"/>
+        <Label Grid.Column="1" Grid.Row="2" Style="{StaticResource ResourceKey=labelDefault}">Password</Label>
+        <PasswordBox Name="PasswordPB" Grid.Row="2" Grid.Column="2" Margin="15" Style="{StaticResource passwordBoxDefault}"/>
+        <StackPanel Grid.Column="1" Grid.Row="3" Grid.ColumnSpan="2" Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Center">
+            <Button Name="UserEnterBtn" Content="Войти" Style="{StaticResource ResourceKey=buttonDefault}" Margin="70 0 20 0" Click="UserEnterBtn_Click" />
+            <Button Name="GuestEnterBtn" Content="Войти как гость" Style="{StaticResource ResourceKey=buttonDefault}" Width="200"/>
+        </StackPanel>
+
+        <StackPanel Grid.Column="0" Grid.Row="4" Grid.ColumnSpan="4" Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Center">
+            <Button Name="AdminEnterTestBtn" Content="Войти как админ" Style="{StaticResource ResourceKey=buttonDefault}" Margin="0 0 20 0" Width="200" Click="AdminEnterTestBtn_Click" />
+            <Button Name="ClientEnterTestBtn" Content="Войти как клиент" Style="{StaticResource ResourceKey=buttonDefault}" Margin="0 0 20 0" Width="200" Click="ClientEnterTestBtn_Click" />
+            <Button Name="ManagerEnterTestBtn" Content="Войти как менджер" Style="{StaticResource ResourceKey=buttonDefault}" Width="200" Click="ManagerEnterTestBtn_Click" />
+        </StackPanel>
+    </Grid>
+</Window>
