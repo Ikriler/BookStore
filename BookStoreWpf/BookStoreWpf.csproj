@@ -217,8 +217,17 @@
     <Compile Include="Pages\Admin\AdminClientPage.xaml.cs">
       <DependentUpon>AdminClientPage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Pages\Admin\AdminCreateProduct.xaml.cs">
+      <DependentUpon>AdminCreateProduct.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Admin\AdminEditProduct.xaml.cs">
+      <DependentUpon>AdminEditProduct.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Pages\Admin\AdminMainPage.xaml.cs">
       <DependentUpon>AdminMainPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Admin\AdminProductsPage.xaml.cs">
+      <DependentUpon>AdminProductsPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Pages\Client\ClientCartPage.xaml.cs">
       <DependentUpon>ClientCartPage.xaml</DependentUpon>
@@ -226,8 +235,18 @@
     <Compile Include="Pages\Client\ClientProductsListPage.xaml.cs">
       <DependentUpon>ClientProductsListPage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Pages\Guest\GuestOrder.xaml.cs">
+      <DependentUpon>GuestOrder.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Guest\GuestOrderData.xaml.cs">
+      <DependentUpon>GuestOrderData.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Guest\GuestProductsList.xaml.cs">
+      <DependentUpon>GuestProductsList.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Utils\BookStoreDBContext.cs" />
     <Compile Include="Utils\FrameObject.cs" />
+    <Compile Include="Utils\GuestCart.cs" />
     <Compile Include="Windows\AdminWindow.xaml.cs">
       <DependentUpon>AdminWindow.xaml</DependentUpon>
     </Compile>
@@ -255,7 +274,19 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Pages\Admin\AdminCreateProduct.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\Admin\AdminEditProduct.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Pages\Admin\AdminMainPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\Admin\AdminProductsPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -264,6 +295,18 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Pages\Client\ClientProductsListPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\Guest\GuestOrder.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\Guest\GuestOrderData.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\Guest\GuestProductsList.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -312,7 +355,6 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Pages\Guest\" />
     <Folder Include="Pages\Manager\" />
     <Folder Include="Resources\Fonts\" />
   </ItemGroup>

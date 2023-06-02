@@ -5,8 +5,20 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:BookStoreWpf.Windows"
         mc:Ignorable="d"
-        Title="GuestWindow" Height="450" Width="800">
+        Title="GuestWindow" Height="450" Width="800" MinHeight="450" MinWidth="800">
     <Grid>
-        
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="0.2*"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Frame Name="GuestFrame" Grid.Row="1" NavigationUIVisibility="Hidden"/>
+        <StackPanel Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Center">
+            <Button Name="GoMain" Content="На главную" Style="{StaticResource ResourceKey=buttonDefault}" Margin="0 0 20 0" Click="GoMain_Click"/>
+            <Button Name="GoOrder" Content="Корзина" Style="{StaticResource ResourceKey=buttonDefault}" Margin="0 0 20 0" Click="GoOrder_Click"/>
+            <Button Name="GoExit" Content="Выйти" Style="{StaticResource ResourceKey=buttonDefault}" Click="GoExit_Click"/>
+        </StackPanel>
     </Grid>
 </Window>

@@ -9,4 +9,10 @@ FD:\Projects\BookStoreWpf\BookStoreWpf\Windows\ClientWindow.xaml;;
 FD:\Projects\BookStoreWpf\BookStoreWpf\Windows\GuestWindow.xaml;;
 FD:\Projects\BookStoreWpf\BookStoreWpf\Windows\ManagerWindow.xaml;;
 FD:\Projects\BookStoreWpf\BookStoreWpf\Pages\Client\ClientCartPage.xaml;;
+FD:\Projects\BookStoreWpf\BookStoreWpf\Pages\Admin\AdminProductsPage.xaml;;
+FD:\Projects\BookStoreWpf\BookStoreWpf\Pages\Admin\AdminCreateProduct.xaml;;
+FD:\Projects\BookStoreWpf\BookStoreWpf\Pages\Admin\AdminEditProduct.xaml;;
+FD:\Projects\BookStoreWpf\BookStoreWpf\Pages\Guest\GuestOrder.xaml;;
+FD:\Projects\BookStoreWpf\BookStoreWpf\Pages\Guest\GuestProductsList.xaml;;
+FD:\Projects\BookStoreWpf\BookStoreWpf\Pages\Guest\GuestOrderData.xaml;;
 

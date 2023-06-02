@@ -30,5 +30,15 @@ namespace BookStoreWpf.Pages.Admin
         {
             FrameObject.frame.Navigate(new AdminClientPage());
         }
+
+        private void GoProducts_Click(object sender, RoutedEventArgs e)
+        {
+            FrameObject.frame.Navigate(new AdminProductsPage());
+        }
+
+        private void GoOrders_Click(object sender, RoutedEventArgs e)
+        {
+            FrameObject.frame.Navigate(new AdminOrdersPage());
+        }
     }
 }

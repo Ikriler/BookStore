@@ -113,3 +113,15 @@ D:\Projects\BookStoreWpf\BookStoreWpf\obj\Debug\Pages\Client\ClientProductsListP
 D:\Projects\BookStoreWpf\BookStoreWpf\obj\Debug\Pages\Client\ClientCartPage.g.cs
 D:\Projects\BookStoreWpf\BookStoreWpf\obj\Debug\Pages\Client\ClientCartPage.baml
 D:\Projects\BookStoreWpf\BookStoreWpf\obj\Debug\GeneratedInternalTypeHelper.g.cs
+D:\Projects\BookStoreWpf\BookStoreWpf\obj\Debug\Pages\Admin\AdminProductsPage.g.cs
+D:\Projects\BookStoreWpf\BookStoreWpf\obj\Debug\Pages\Admin\AdminProductsPage.baml
+D:\Projects\BookStoreWpf\BookStoreWpf\obj\Debug\Pages\Admin\AdminCreateProduct.g.cs
+D:\Projects\BookStoreWpf\BookStoreWpf\obj\Debug\Pages\Admin\AdminEditProduct.g.cs
+D:\Projects\BookStoreWpf\BookStoreWpf\obj\Debug\Pages\Admin\AdminCreateProduct.baml
+D:\Projects\BookStoreWpf\BookStoreWpf\obj\Debug\Pages\Admin\AdminEditProduct.baml
+D:\Projects\BookStoreWpf\BookStoreWpf\obj\Debug\Pages\Guest\GuestOrder.g.cs
+D:\Projects\BookStoreWpf\BookStoreWpf\obj\Debug\Pages\Guest\GuestProductsList.g.cs
+D:\Projects\BookStoreWpf\BookStoreWpf\obj\Debug\Pages\Guest\GuestOrder.baml
+D:\Projects\BookStoreWpf\BookStoreWpf\obj\Debug\Pages\Guest\GuestProductsList.baml
+D:\Projects\BookStoreWpf\BookStoreWpf\obj\Debug\Pages\Guest\GuestOrderData.g.cs
+D:\Projects\BookStoreWpf\BookStoreWpf\obj\Debug\Pages\Guest\GuestOrderData.baml

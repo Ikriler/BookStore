@@ -10,11 +10,11 @@ none
 false
 DEBUG;TRACE
 D:\Projects\BookStoreWpf\BookStoreWpf\App.xaml
-9659184022
+15-1993501573
 
-401551542866
+47-1895790310
 55-58688484
-LoginWindow.xaml;Pages\Admin\AdminClientPage.xaml;Pages\Admin\AdminMainPage.xaml;Pages\Client\ClientCartPage.xaml;Pages\Client\ClientProductsListPage.xaml;Windows\AdminWindow.xaml;Windows\ClientWindow.xaml;Windows\GuestWindow.xaml;Windows\ManagerWindow.xaml;
+LoginWindow.xaml;Pages\Admin\AdminClientPage.xaml;Pages\Admin\AdminCreateProduct.xaml;Pages\Admin\AdminEditProduct.xaml;Pages\Admin\AdminMainPage.xaml;Pages\Admin\AdminProductsPage.xaml;Pages\Client\ClientCartPage.xaml;Pages\Client\ClientProductsListPage.xaml;Pages\Guest\GuestOrder.xaml;Pages\Guest\GuestOrderData.xaml;Pages\Guest\GuestProductsList.xaml;Windows\AdminWindow.xaml;Windows\ClientWindow.xaml;Windows\GuestWindow.xaml;Windows\ManagerWindow.xaml;
 
 False
 

@@ -26,7 +26,7 @@
         <PasswordBox Name="PasswordPB" Grid.Row="2" Grid.Column="2" Margin="15" Style="{StaticResource passwordBoxDefault}"/>
         <StackPanel Grid.Column="1" Grid.Row="3" Grid.ColumnSpan="2" Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Center">
             <Button Name="UserEnterBtn" Content="Войти" Style="{StaticResource ResourceKey=buttonDefault}" Margin="70 0 20 0" Click="UserEnterBtn_Click" />
-            <Button Name="GuestEnterBtn" Content="Войти как гость" Style="{StaticResource ResourceKey=buttonDefault}" Width="200"/>
+            <Button Name="GuestEnterBtn" Content="Войти как гость" Style="{StaticResource ResourceKey=buttonDefault}" Width="200" Click="GuestEnterBtn_Click"/>
         </StackPanel>
 
         <StackPanel Grid.Column="0" Grid.Row="4" Grid.ColumnSpan="4" Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Center">

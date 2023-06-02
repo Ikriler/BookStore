@@ -1,4 +1,8 @@
-﻿using System;
+﻿using BookStoreWpf.Models;
+using BookStoreWpf.Pages.Client;
+using BookStoreWpf.Pages.Guest;
+using BookStoreWpf.Utils;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -22,6 +26,30 @@ namespace BookStoreWpf.Windows
         public GuestWindow()
         {
             InitializeComponent();
+
+            FrameObject.frame = GuestFrame;
+
+            FrameObject.frame.Navigate(new GuestProductsList());
+        }
+
+        private void GoMain_Click(object sender, RoutedEventArgs e)
+        {
+            FrameObject.frame.Navigate(new GuestProductsList());
+        }
+
+        private void GoExit_Click(object sender, RoutedEventArgs e)
+        {
+            FrameObject.frame = null;
+
+            Window window = new LoginWindow();
+            window.WindowStartupLocation = WindowStartupLocation.CenterScreen;
+            window.Show();
+            this.Close();
+        }
+
+        private void GoOrder_Click(object sender, RoutedEventArgs e)
+        {
+            FrameObject.frame.Navigate(new GuestOrder());
         }
     }
 }

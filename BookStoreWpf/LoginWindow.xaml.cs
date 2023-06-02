@@ -38,6 +38,12 @@ namespace BookStoreWpf
         {
             try
             {
+                if(String.IsNullOrEmpty(EmailTB.Text) || String.IsNullOrEmpty(PasswordPB.Password))
+                {
+                    MessageBox.Show("Введите данные для входа!");
+                    return;
+                }
+
                 User user = BookStoreDBContext.db.Users.Where(u => u.email.Equals(EmailTB.Text) && u.password.Equals(PasswordPB.Password)).Include(u => u.role).FirstOrDefault();
 
                 if (user == null)
@@ -99,6 +105,12 @@ namespace BookStoreWpf
             PasswordPB.Password = "manager";
 
             UserEnterBtn_Click(sender, e);
+        }
+
+        private void GuestEnterBtn_Click(object sender, RoutedEventArgs e)
+        {
+            OpenWindow(new GuestWindow());
+            this.Close();
         }
     }
 }

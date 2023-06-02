@@ -10,6 +10,7 @@ namespace BookStoreWpf.Enums
     {
         ADMIN = 1,
         MANAGER = 2,
-        CLIENT = 3
+        CLIENT = 3,
+        GUEST = 1002
     }
 }
